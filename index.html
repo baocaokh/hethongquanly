@@ -13,32 +13,24 @@
       background-color: #f8fafc;
       color: #222;
     }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 8px;
-    }
-    p {
-      font-size: 1.1rem;
-      color: #444;
-    }
+    h1 { font-size: 2rem; margin-bottom: 8px; }
+    p { font-size: 1.1rem; color: #444; }
   </style>
 </head>
 <body>
   <h1>👋 Chào mừng bạn đến với Chatbot kỹ thuật!</h1>
   <p>Nhấn biểu tượng 💬 ở góc phải dưới màn hình để bắt đầu trò chuyện.</p>
 
-  <!-- ✅ BOTPRESS WEBCHAT - PHIÊN BẢN MỚI NHẤT -->
-  <script src="https://cdn.botpress.cloud/webchat/v3.3.1/webchat.js"></script>
+  <!-- ✅ BOTPRESS WEBCHAT - BẢN HOẠT ĐỘNG ỔN ĐỊNH -->
+  <script src="https://cdn.botpress.dev/webchat/v1/inject.js"></script>
   <script>
     window.botpressWebChat.init({
-      configUrl: "https://files.bpcontent.cloud/2025/10/15/08/20251015083514-LLAFJBN5.json",
-      hostUrl: "https://cdn.botpress.cloud/webchat/v3.3.1"
+      botId: "49165123-5810-4ed6-8326-a302859ce537",
+      hostUrl: "https://cdn.botpress.dev",
+      messagingUrl: "https://messaging.botpress.dev",
+      clientId: "896515a3-b530-4f8c-a516-c1c5062c6242",
+      configUrl: "https://files.bpcontent.cloud/2025/10/15/08/20251015083514-LLAFJBN5.json"
     });
-
-    // Tự động mở chat khi tải xong
-    window.botpressWebChat.onEvent(() => {
-      window.botpressWebChat.sendEvent({ type: "show" });
-    }, ["LIFECYCLE.LOADED"]);
   </script>
 </body>
 </html>
