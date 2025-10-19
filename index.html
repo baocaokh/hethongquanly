@@ -8,34 +8,31 @@
   <style>
     body {
       font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      padding: 40px;
-      text-align: center;
       background-color: #f8fafc;
       color: #222;
+      text-align: center;
+      padding: 40px;
     }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 8px;
-    }
-    p {
-      font-size: 1.1rem;
-      color: #444;
+    iframe {
+      width: 100%;
+      height: 700px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-top: 20px;
     }
   </style>
 </head>
 
 <body>
   <h1>👋 Chào mừng bạn đến với Chatbot kỹ thuật!</h1>
-  <p>Nhấn biểu tượng 💬 ở góc phải dưới màn hình để bắt đầu trò chuyện.</p>
+  <p>Chatbot đang được tải bên dưới. Hãy chờ vài giây nhé...</p>
 
-  <!-- ✅ PHIÊN BẢN DÙNG ĐƯỢC VỚI GÓI FREE TRÊN GITHUB PAGES -->
-  <script src="https://cdn.botpress.cloud/webchat/v3.3.3/webchat.js"></script>
-  <script>
-    window.botpressWebChat.init({
-      configUrl: "https://files.bpcontent.cloud/2025/10/15/08/20251015083514-LLAFJBN5.json",
-      hostUrl: "https://cdn.botpress.cloud/webchat/v3.3.3"
-    });
-  </script>
+  <!-- ✅ NHÚNG CHATBOT BẰNG LINK SHARE -->
+  <iframe
+    src="https://cdn.botpress.cloud/webchat/v3.3/shareable.html?configUrl=https://files.bpcontent.cloud/2025/10/15/08/20251015083514-LLAFJBN5.json"
+    allow="microphone; autoplay"
+  ></iframe>
+
 </body>
 </html>
