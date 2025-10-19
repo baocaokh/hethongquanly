@@ -3,19 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Chatbot Botpress</title>
+  <title>Chatbot kỹ thuật</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      padding: 24px;
+      text-align: center;
+    }
+    h1 { font-size: 2rem; margin-bottom: 8px; }
+    p  { font-size: 1.1rem; color: #333; }
+  </style>
 </head>
 <body>
-  <h1>👋 Chào mừng bạn!</h1>
-  <p>Nhấn biểu tượng góc phải để bắt đầu trò chuyện.</p>
+  <h1>👋 Chào mừng bạn đến với Chatbot kỹ thuật!</h1>
+  <p>Nhấn biểu tượng 💬 ở góc phải dưới màn hình để bắt đầu trò chuyện.</p>
 
-  <!-- BOTPRESS WEBCHAT -->
+  <!-- BOTPRESS WEBCHAT (không cần Allowed Origins, phù hợp gói Free) -->
   <script src="https://cdn.botpress.cloud/webchat/v3.2.1/webchat.js"></script>
   <script>
     window.botpressWebChat.init({
       configUrl: "https://files.bpcontent.cloud/2025/10/15/08/20251015083514-LLAFJBN5.json",
       hostUrl: "https://cdn.botpress.cloud/webchat/v3.2.1"
     });
+
+    // Tuỳ chọn: tự động mở chat khi widget tải xong
+    window.botpressWebChat.onEvent(function () {
+      window.botpressWebChat.sendEvent({ type: 'show' });
+    }, ['LIFECYCLE.LOADED']);
   </script>
 </body>
 </html>
